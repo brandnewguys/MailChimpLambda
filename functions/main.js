@@ -1,3 +1,6 @@
+// Mailchimp audience ID: 597a9e4f7e
+// Mailchimp API key: 628b9e69c5a199498a15a1694344b2b3-us12
+
 exports.handler = (event, context, callback) => {
     const https = require("https");
 
@@ -6,8 +9,8 @@ exports.handler = (event, context, callback) => {
     });
 
     const options = {
-        hostname: 'usX.api.mailchimp.com',
-        path: '/3.0/lists',
+        hostname: 'us12.api.mailchimp.com',
+        path: '/3.0',
         port: 443,
         method: 'POST',
         headers: {
