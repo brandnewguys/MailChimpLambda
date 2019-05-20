@@ -8,16 +8,22 @@ exports.handler = (event, context, callback) => {
         lists: "597a9e4f7e"
     });
 
-    const options = {
-        hostname: 'us12.api.mailchimp.com',
-        path: '/3.0',
+    const options = JSON.stringify({
+        url: "https://us12.api.mailchimp.com/3.0/",
+        hostname:"us12.api.mailchimp.com",
+        path: "/3.0/",
         port: 443,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
+        },
+        auth: {
+            user: 'key',
+            pass: '7617215fc7512935ab6ced47fea0bd42-us12'
         }
-    };
+    });
 
+    console.log(`Options: ${options}`);
     const req = https.request(options, (res) => {
         console.log(`STATUS: ${res.statusCode}`);
 
@@ -42,3 +48,6 @@ exports.handler = (event, context, callback) => {
     req.write(postData);
     req.end();
 };
+
+
+
