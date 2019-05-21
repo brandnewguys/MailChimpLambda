@@ -1,5 +1,5 @@
 // Mailchimp audience ID: 597a9e4f7e
-// Mailchimp API key: 7617215fc7512935ab6ced47fea0bd42-us12
+// Mailchimp API key: 44ac5ff4527df465cd8716c6367ce255-us12
 
 exports.handler = (event, context, callback) => {
     const https = require("https");
@@ -12,14 +12,11 @@ exports.handler = (event, context, callback) => {
         hostname: "us12.api.mailchimp.com",
         path: "/3.0/",
         port: 443,
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },
-        auth: [{
-            user: 'brandnewguys',
-            pass: '7617215fc7512935ab6ced47fea0bd42-us12'
-        }]
+        auth: 'brandnewguys:44ac5ff4527df465cd8716c6367ce255-us12'
     };
 
     console.log(`Options: ${JSON.stringify(options)}`);
