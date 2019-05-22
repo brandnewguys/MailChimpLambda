@@ -2,8 +2,26 @@
 <html lang="en">
     <head>
         <title>hoi</title>
+        <script src="form.js"></script>
     </head>
     <body>
-        <h1 style="font-size: 160pt; width: 100%; text-align: center;"><a href="/.netlify/functions/main">function</a></h1>
+        <h1 style="font-size: 100pt; width: 100%; text-align: center;"><a href="/.netlify/functions/main">function</a></h1>
+
+        <form id="test" action="#" method="post">
+            <div class="form-group">
+                <label for="FNAME">Voornaam: </label>
+                <input class="form-control" type="text" name="FNAME" id="FNAME" required="required"/>
+            </div>
+            <div class="form-group">
+                <label for="LNAME">Achternaam: </label>
+                <input class="form-control" type="text" name="LNAME" id="LNAME" required="required"/>
+            </div>
+            <div class="form-group">
+                <label for="email_address">E-mail: </label>
+                <input class="form-control" type="text" name="email_address" id="email_address" required="required"/>
+            </div>
+            <input type="hidden" name="status" value="subscribed"/>
+            <input type="submit" value="Verzenden" class="btn"/>
+        </form>
     </body>
 </html>
