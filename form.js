@@ -1,5 +1,4 @@
 (() => {
-
     document.addEventListener("DOMContentLoaded", () => {
         let form = document.getElementById("test");
 
@@ -32,13 +31,10 @@
         delete obj.FNAME;
         delete obj.LNAME;
 
-        console.log(`JSONobj: ${obj}`);
-
         return JSON.stringify(obj);
     }
 
     function request(postData) {
-        console.log(postData);
         const xhr = new XMLHttpRequest();
 
         xhr.open("POST", "https://priceless-aryabhata-4530e1-0e60a8.netlify.live/.netlify/functions/main", true);
